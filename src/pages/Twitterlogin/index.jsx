@@ -1,17 +1,39 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import { useGoogleLogin } from "@react-oauth/google";
+import { registerDeviceAuth } from "service/api";
 
 import { Button, Img, Input, Line, Text } from "components";
 import Header from "components/Header";
 
 const TwitterloginPage = () => {
+  const [register, setRegister] = React.useState();
+  const navigate = useNavigate();
   const googleSignIn = useGoogleLogin({
     onSuccess: (res) => {
       console.log("res", res);
       alert("Login successfull. 😍");
     },
   });
+  React.useEffect(() => {
+    callApi();
+  }, []);
+
+  function callApi() {
+    const req = {};
+
+    registerDeviceAuth(req)
+      .then((res) => {
+        setRegister(res?.data);
+
+        navigate("/map");
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }
 
   return (
     <>
