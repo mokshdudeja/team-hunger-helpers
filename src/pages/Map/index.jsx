@@ -150,8 +150,10 @@ const MapPage = () => {
               <div className="flex flex-col gap-2 items-center justify-start w-[36%]">
                 <Button
                   className="border border-blue_gray-400 border-solid flex h-10 items-center justify-center w-10"
+                  shape="round"
                   color="white_A700"
                   size="xs"
+                  variant="fill"
                 >
                   <Img
                     className="h-6"

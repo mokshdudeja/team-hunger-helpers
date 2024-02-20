@@ -16,10 +16,10 @@ const Button = ({
   className = "",
   leftIcon,
   rightIcon,
-  shape = "round",
-  size = "sm",
-  variant = "fill",
-  color = "blue_A700",
+  shape = "",
+  size = "",
+  variant = "",
+  color = "",
   ...restProps
 }) => {
   return (
