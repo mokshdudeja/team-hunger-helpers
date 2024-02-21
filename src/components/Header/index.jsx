@@ -1,8 +1,12 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import { Button, Img, Text } from "components";
 
 const Header = (props) => {
+  const navigate = useNavigate();
+
   return (
     <>
       <header className={props.className}>
@@ -58,7 +62,8 @@ const Header = (props) => {
               <Text size="txtGilroyMedium16">Sign in</Text>
             </a>
             <Button
-              className="cursor-pointer font-gilroy font-medium min-w-[148px] text-base text-center"
+              className="common-pointer cursor-pointer font-gilroy font-medium min-w-[148px] text-base text-center"
+              onClick={() => navigate("/map")}
               shape="round"
               color="blue_A700"
               size="sm"
