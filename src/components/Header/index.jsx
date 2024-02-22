@@ -58,7 +58,7 @@ const Header = (props) => {
             </Text>
           </div>
           <div className="flex md:flex-1 flex-row gap-6 sm:hidden items-center justify-between md:ml-[0] ml-[225px] rounded-md w-[18%] md:w-full">
-            <a href="javascript:" className="text-base text-gray-900">
+            <a href="javascript:" className="hidden text-base text-gray-900">
               <Text size="txtGilroyMedium16">Sign in</Text>
             </a>
             <Button

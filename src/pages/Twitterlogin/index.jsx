@@ -37,10 +37,7 @@ const TwitterloginPage = () => {
 
   return (
     <>
-      <div
-        className="common-pointer bg-gray-50 flex flex-col font-gilroy sm:gap-10 md:gap-10 gap-[82px] items-center justify-start mx-auto p-[35px] sm:px-5 w-full"
-        onClick={() => navigate("/map")}
-      >
+      <div className="bg-gray-50 flex flex-col font-gilroy sm:gap-10 md:gap-10 gap-[82px] items-center justify-start mx-auto p-[35px] sm:px-5 w-full">
         <Header className="flex items-center justify-center md:px-5 w-full" />
         <div className="flex flex-col gap-[29px] items-center justify-start mb-[267px] md:px-5 w-[39%] md:w-full">
           <Text
