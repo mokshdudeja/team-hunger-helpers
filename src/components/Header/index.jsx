@@ -1,19 +1,15 @@
 import React from "react";
 
-import { useNavigate } from "react-router-dom";
-
 import { Button, Img, Text } from "components";
 
 const Header = (props) => {
-  const navigate = useNavigate();
-
   return (
     <>
       <header className={props.className}>
         <div className="flex md:flex-col flex-row md:gap-5 items-center justify-center w-full">
           <div className="header-row my-[7px]">
             <Img
-              className="h-[35px]"
+              className="h-[35px] sm:inline"
               src="images/img_group10392_22.svg"
               alt="Group10392"
             />
@@ -62,8 +58,7 @@ const Header = (props) => {
               <Text size="txtGilroyMedium16">Sign in</Text>
             </a>
             <Button
-              className="common-pointer cursor-pointer font-gilroy font-medium min-w-[148px] text-base text-center"
-              onClick={() => navigate("/map")}
+              className="cursor-pointer font-gilroy font-medium min-w-[148px] text-base text-center"
               shape="round"
               color="blue_A700"
               size="sm"

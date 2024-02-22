@@ -3,13 +3,11 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import { useGoogleLogin } from "@react-oauth/google";
-import { registerDeviceAuth } from "service/api";
 
 import { Button, Img, Input, Line, Text } from "components";
 import Header from "components/Header";
 
 const TwitterloginPage = () => {
-  const [register, setRegister] = React.useState();
   const navigate = useNavigate();
   const googleSignIn = useGoogleLogin({
     onSuccess: (res) => {
@@ -17,23 +15,6 @@ const TwitterloginPage = () => {
       alert("Login successfull. 😍");
     },
   });
-  React.useEffect(() => {
-    callApi();
-  }, []);
-
-  function callApi() {
-    const req = {};
-
-    registerDeviceAuth(req)
-      .then((res) => {
-        setRegister(res?.data);
-
-        navigate("/map");
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }
 
   return (
     <>
@@ -106,7 +87,7 @@ const TwitterloginPage = () => {
             </div>
             <div className="flex flex-col gap-4 items-center justify-start mt-[29px] w-full">
               <Button
-                className="common-pointer cursor-pointer font-medium min-w-[528px] sm:min-w-full text-base text-center"
+                className="common-pointer cursor-pointer sm:flex font-medium min-w-[528px] sm:min-w-full text-base text-center"
                 onClick={() => googleSignIn()}
                 shape="round"
                 color="blue_A700"
@@ -116,7 +97,8 @@ const TwitterloginPage = () => {
                 Sign in with Google
               </Button>
               <Button
-                className="cursor-pointer font-medium hidden min-w-[528px] sm:min-w-full text-base text-center"
+                className="common-pointer cursor-pointer sm:flex font-medium hidden min-w-[528px] sm:min-w-full text-base text-center"
+                onClick={() => navigate("/map")}
                 shape="round"
                 color="blue_A700"
                 size="sm"
