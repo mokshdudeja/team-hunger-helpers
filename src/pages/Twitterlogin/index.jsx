@@ -97,7 +97,7 @@ const TwitterloginPage = () => {
                 Sign in with Google
               </Button>
               <Button
-                className="common-pointer cursor-pointer sm:flex font-medium hidden min-w-[528px] sm:min-w-full text-base text-center"
+                className="common-pointer cursor-pointer sm:flex font-medium inline min-w-[528px] sm:min-w-full text-base text-center"
                 onClick={() => navigate("/map")}
                 shape="round"
                 color="blue_A700"
