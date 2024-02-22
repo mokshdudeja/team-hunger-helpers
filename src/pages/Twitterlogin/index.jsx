@@ -78,7 +78,7 @@ const TwitterloginPage = () => {
             className="md:text-3xl sm:text-[28px] text-[32px] text-blue_gray-900"
             size="txtGilroySemiBold32"
           >
-            Sign in to Recharge Direct
+            welcome to hunger helpers 
           </Text>
           <div className="flex flex-col items-start justify-start w-full">
             <div className="flex-col gap-1.5 hidden items-start justify-start rounded-lg w-full">
@@ -144,7 +144,7 @@ const TwitterloginPage = () => {
                 className="cursor-pointer font-medium hidden min-w-[528px] sm:min-w-full text-base text-center"
                 variant="outline"
               >
-                Sign in with Facebook
+                open map 
               </Button>
               <div className="border border-blue-A700 border-solid flex-col hidden items-center justify-end p-3 rounded-md w-full">
                 <div className="flex flex-row gap-2 items-start justify-center w-[36%] md:w-full">
